@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ketlin Victória | Mídia kit</title>
+<meta name="description" content="Ketlin Victória, criadora de conteúdo de lifestyle, fitness e moda. Conheça o perfil, o público e as formas de parceria.">
+<meta name="theme-color" content="#240b15">
+
+<!-- Open Graph: troque a imagem quando tiver a foto final -->
+<meta property="og:title" content="Ketlin Victória | Mídia kit">
+<meta property="og:description" content="Lifestyle, fitness e moda com rotina real.">
+<meta property="og:type" content="website">
+<!-- <meta property="og:image" content="https://SEU-DOMINIO/assets/img/og.jpg"> -->
+
+<!-- Marca a página como "com JS" antes de renderizar (evita piscar e permite fallback sem JS) -->
+<script>document.documentElement.classList.add('js');</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<!-- Baixa a foto do topo já no início, junto com o HTML -->
+<link rel="preload" as="image" href="assets/img/hero.jpg" fetchpriority="high">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ============ NAVEGAÇÃO ============ -->
+<nav class="nav" aria-label="Principal">
+  <a class="nav__logo" href="#topo">Ketlin Victória</a>
+  <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">
+    <span class="nav__bars" aria-hidden="true"></span>
+    <span class="sr">Abrir menu</span>
+  </button>
+</nav>
+
+<div class="menu" id="menu" inert>
+  <ul class="menu__list">
+    <li><a href="#movimento">Em movimento</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#trabalhos">Trabalhos</a></li>
+    <li><a href="#conteudo">Conteúdo</a></li>
+    <li><a href="#galeria">Galeria</a></li>
+    <li><a href="#numeros">Números</a></li>
+    <li><a href="#parcerias">Parcerias</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="topo">
+  <figure class="media hero__media" data-label="Foto principal (vertical, 4:5 ou 9:16)">
+    <img src="assets/img/hero.jpg" alt="Ketlin correndo ao ar livre" fetchpriority="high">
+  </figure>
+
+  <div class="hero__content wrap">
+    <p class="hero__tag hero__fade">Corpo em movimento, rotina real.</p>
+    <h1 class="hero__name" aria-label="Ketlin Victória">
+      <span class="line"><span>Ketlin</span></span>
+      <span class="line"><span>Victória</span></span>
+    </h1>
+    <div class="hero__actions hero__fade">
+      <a class="btn btn--solid" href="#contato">Falar sobre parceria</a>
+      <a class="btn" href="https://wa.me/556194078951?text=Oi%20Ketlin!%20Vi%20seu%20m%C3%ADdia%20kit%20e%20queria%20conversar%20sobre%20uma%20parceria." target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ VÍDEOS EM MOVIMENTO ============ -->
+<section class="section section--deep" id="movimento">
+  <div class="wrap">
+    <h2 class="h2">Em movimento</h2>
+    <p class="lead">Treino, corrida e dia a dia do jeito que acontece. <span class="swipe-hint">Deslize para o lado.</span></p>
+  </div>
+
+  <!--
+    Cada item: <figure class="media reel__item"> com <video>.
+    Vídeos tocam sozinhos (sem som) quando aparecem na tela e pausam quando saem.
+    Formato ideal: vertical 9:16, mp4 (H.264), até ~3 MB cada, 5 a 12 segundos.
+  -->
+  <div class="reel" tabindex="0" aria-label="Vídeos da Ketlin, deslize para o lado">
+    <figure class="media media--video reel__item" data-label="Vídeo 1 (9:16)">
+      <video muted loop playsinline preload="none" data-autoplay poster="assets/img/poster-1.jpg">
+        <source src="assets/video/clip-1.mp4" type="video/mp4">
+      </video>
+    </figure>
+    <figure class="media media--video reel__item" data-label="Vídeo 2 (9:16)">
+      <video muted loop playsinline preload="none" data-autoplay poster="assets/img/poster-2.jpg">
+        <source src="assets/video/clip-2.mp4" type="video/mp4">
+      </video>
+    </figure>
+    <figure class="media media--video reel__item" data-label="Vídeo 3 (9:16)">
+      <video muted loop playsinline preload="none" data-autoplay poster="assets/img/poster-3.jpg">
+        <source src="assets/video/clip-3.mp4" type="video/mp4">
+      </video>
+    </figure>
+    <figure class="media media--video reel__item" data-label="Vídeo 4 (9:16)">
+      <video muted loop playsinline preload="none" data-autoplay poster="assets/img/poster-4.jpg">
+        <source src="assets/video/clip-4.mp4" type="video/mp4">
+      </video>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ SOBRE ============ -->
+<section class="section section--paper" id="sobre">
+  <div class="wrap about">
+    <figure class="media about__photo" data-label="Retrato (4:5)">
+      <img src="assets/img/sobre.jpg" alt="Retrato da Ketlin" loading="lazy">
+    </figure>
+    <div class="about__text">
+      <h2 class="h2">Oi, eu sou a Ketlin.</h2>
+      <p>Crio conteúdo sobre um estilo de vida ativo e cuidadoso: treinos na academia, corridas de rua, looks do dia, eventos e momentos de autocuidado.</p>
+      <p>Quero mostrar que dá para cuidar do corpo e da mente sem abrir mão da vaidade e da leveza, e que rotina real também pode ser bonita.</p>
+      <p>Também sou estudante de Pedagogia e, hoje, trabalho em uma escola católica. Essa rotina me ensina a comunicar com clareza, paciência e cuidado, e isso aparece no jeito como eu crio conteúdo.</p>
+      <ul class="chips" aria-label="Temas">
+        <li>Lifestyle</li>
+        <li>Fitness</li>
+        <li>Corrida</li>
+        <li>Moda</li>
+        <li>Autocuidado</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MEUS TRABALHOS (sem fotos: cada trabalho é um "ingresso") ============ -->
+<!--
+  Para adicionar um trabalho, copie um bloco <li class="ticket"> inteiro.
+  Quando tiver marcas para citar, adicione dentro de .ticket__main, antes do <h3>:
+  <span class="ticket__brand">Nome da marca</span>
+-->
+<section class="section section--deep works" id="trabalhos">
+  <div class="wrap">
+    <h2 class="h2">Meus trabalhos</h2>
+    <p class="lead">Alguns dos conteúdos que já criei, em vídeo, foto e presença em eventos.</p>
+
+    <ul class="tickets">
+      <li class="ticket">
+        <div class="ticket__main">
+          <h3>Prova de looks fitness</h3>
+          <p>Macaquinhos, conjuntos e peças de treino mostrados em uso, com caimento e look completo.</p>
+        </div>
+        <div class="ticket__stub"><span>Formato</span><strong>Reels</strong></div>
+      </li>
+      <li class="ticket">
+        <div class="ticket__main">
+          <h3>Treino e corrida</h3>
+          <p>Rotina de academia e corrida de rua, com ritmo, energia e a evolução de cada treino.</p>
+        </div>
+        <div class="ticket__stub"><span>Formato</span><strong>Reels e fotos</strong></div>
+      </li>
+      <li class="ticket">
+        <div class="ticket__main">
+          <h3>Eventos de bem-estar</h3>
+          <p>Presença em eventos e ativações, mostrando o ambiente, as marcas e a experiência.</p>
+        </div>
+        <div class="ticket__stub"><span>Formato</span><strong>Stories e feed</strong></div>
+      </li>
+      <li class="ticket">
+        <div class="ticket__main">
+          <h3>Achados e dicas</h3>
+          <p>Vídeos em formato POV indicando peças e produtos que fazem sentido na rotina.</p>
+        </div>
+        <div class="ticket__stub"><span>Formato</span><strong>Reels</strong></div>
+      </li>
+      <li class="ticket">
+        <div class="ticket__main">
+          <h3>Looks do dia</h3>
+          <p>Produções de moda para festas e para o dia a dia, com direção de cena e estética própria.</p>
+        </div>
+        <div class="ticket__stub"><span>Formato</span><strong>Feed</strong></div>
+      </li>
+    </ul>
+
+    <!--
+      "Passe": ingresso grande que é "impresso" ao entrar na tela, inclina com o mouse/toque
+      e tem brilhos em camadas que se movem com a rolagem. O botão é o link do Instagram.
+    -->
+    <div class="pass-wrap">
+      <span class="spark spark--1" data-depth="0.9" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.9 6.6 5.4 11.1 12 12-6.6.9-11.1 5.4-12 12-.9-6.6-5.4-11.1-12-12C6.6 11.1 11.1 6.6 12 0z"/></svg></span>
+      <span class="spark spark--2" data-depth="0.5" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.9 6.6 5.4 11.1 12 12-6.6.9-11.1 5.4-12 12-.9-6.6-5.4-11.1-12-12C6.6 11.1 11.1 6.6 12 0z"/></svg></span>
+      <span class="spark spark--3" data-depth="1.3" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.9 6.6 5.4 11.1 12 12-6.6.9-11.1 5.4-12 12-.9-6.6-5.4-11.1-12-12C6.6 11.1 11.1 6.6 12 0z"/></svg></span>
+
+      <div class="pass-stage">
+        <div class="pass">
+          <div class="pass__slot" aria-hidden="true"></div>
+          <div class="pass__print">
+            <div class="pass__tilt">
+              <div class="pass__main">
+                <p class="pass__kicker">Entrada livre</p>
+                <h3 class="pass__title">Tem muito mais no meu perfil.</h3>
+                <a class="btn btn--ig" href="https://www.instagram.com/ketlinpires_18/" target="_blank" rel="noopener">
+                  <svg class="ig" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                  <span>Veja meus trabalhos no Instagram</span>
+                </a>
+              </div>
+              <div class="pass__stub" aria-hidden="true">
+                <span class="pass__code"></span>
+                <span class="pass__handle">@ketlinpires_18</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PILARES ============ -->
+<section class="section section--dark" id="conteudo">
+  <div class="wrap">
+    <h2 class="h2">O que eu posto</h2>
+    <div class="pillars">
+      <details class="pillar" name="pilares" open>
+        <summary>Fitness</summary>
+        <p>Treinos, rotina de academia e dicas de constância. Mostro a carga aumentando e a cabeça acompanhando.</p>
+      </details>
+      <details class="pillar" name="pilares">
+        <summary>Corrida</summary>
+        <p>Treinos ao ar livre, provas de rua e a evolução de cada quilômetro, com a rotina por trás de cada prova.</p>
+      </details>
+      <details class="pillar" name="pilares">
+        <summary>Moda</summary>
+        <p>Looks do dia, produções para eventos e roupas de treino em vídeo, com foco em peças que a gente usa de verdade.</p>
+      </details>
+      <details class="pillar" name="pilares">
+        <summary>Beleza e bem-estar</summary>
+        <p>Skincare, autocuidado e pequenos hábitos que deixam a rotina mais leve.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERIA (fotos e vídeos misturados) ============ -->
+<section class="section section--paper" id="galeria">
+  <div class="wrap">
+    <h2 class="h2">Looks e momentos</h2>
+    <p class="lead">Uma amostra da estética e da energia do perfil.</p>
+
+    <!--
+      Classes de tamanho: .tall (2 linhas) e .wide (2 colunas).
+      Em telas grandes (1000px+) o layout é fixo em 5 colunas x 2 linhas, pela ORDEM dos itens:
+      1 tall | 2 | 3 | 4 wide | 5 | 6 | 7 wide  (se mudar a ordem ou a quantidade, ajuste o grid-template-areas no CSS).
+    -->
+    <div class="gallery">
+      <figure class="media tall" data-label="Foto">
+        <img src="assets/img/galeria-1.jpg" alt="" loading="lazy">
+      </figure>
+      <figure class="media media--video" data-label="Vídeo">
+        <video muted loop playsinline preload="none" data-autoplay poster="assets/img/galeria-poster-1.jpg">
+          <source src="assets/video/galeria-1.mp4" type="video/mp4">
+        </video>
+      </figure>
+      <figure class="media" data-label="Foto">
+        <img src="assets/img/galeria-2.jpg" alt="" loading="lazy">
+      </figure>
+      <figure class="media media--video wide" data-label="Vídeo horizontal">
+        <video muted loop playsinline preload="none" data-autoplay poster="assets/img/galeria-poster-2.jpg">
+          <source src="assets/video/galeria-2.mp4" type="video/mp4">
+        </video>
+      </figure>
+      <figure class="media" data-label="Foto">
+        <img src="assets/img/galeria-3.jpg" alt="" loading="lazy">
+      </figure>
+      <figure class="media" data-label="Foto">
+        <img src="assets/img/galeria-4.jpg" alt="" loading="lazy">
+      </figure>
+      <figure class="media wide" data-label="Foto horizontal">
+        <img src="assets/img/galeria-5.jpg" alt="" loading="lazy">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NÚMEROS ============ -->
+<section class="section section--wine" id="numeros">
+  <div class="wrap">
+    <h2 class="h2">Quem acompanha</h2>
+    <p class="lead">Um público jovem, interessado em moda, treino e rotina saudável.</p>
+
+    <!--
+      Use data-count para animar a contagem. Sem data-count, o texto fica como está.
+      data-suffix adiciona o sufixo e data-decimals define as casas decimais.
+      Fonte: Insights do Instagram, 13 de jul a 11 de out de 2026 (90 dias).
+    -->
+    <dl class="stats">
+      <div class="stat">
+        <dd class="stat__num" data-count="3608">3.608</dd>
+        <dt class="stat__label">seguidores no Instagram</dt>
+      </div>
+      <div class="stat">
+        <dd class="stat__num" data-count="16" data-suffix=" mil">16 mil</dd>
+        <dt class="stat__label">visualizadores em 90 dias</dt>
+      </div>
+      <div class="stat">
+        <dd class="stat__num" data-count="4" data-suffix=" mil">4 mil</dd>
+        <dt class="stat__label">interações em 90 dias</dt>
+      </div>
+      <div class="stat">
+        <dd class="stat__num" data-count="54.7" data-decimals="1" data-suffix="%">54,7%</dd>
+        <dt class="stat__label">do público é feminino</dt>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ PARCERIAS ============ -->
+<section class="section section--paper" id="parcerias">
+  <div class="wrap">
+    <h2 class="h2">Vamos trabalhar juntas</h2>
+    <p class="lead">Busco marcas que combinem com a minha rotina e com o meu público, para criar conteúdo autêntico e bem produzido.</p>
+
+    <h3 class="h3">O que posso fazer</h3>
+    <ul class="formats">
+      <li><strong>Reels</strong><span>Treino, prova de look, review e rotina com o seu produto.</span></li>
+      <li><strong>Stories</strong><span>Sequências com bastidores, uso real e link direto.</span></li>
+      <li><strong>Posts e carrosséis</strong><span>Fotos para o feed com identidade visual cuidada.</span></li>
+      <li><strong>Eventos</strong><span>Presença e cobertura de lançamentos, ativações e provas.</span></li>
+      <li><strong>Campanhas contínuas</strong><span>Conteúdo recorrente, com cupom e acompanhamento.</span></li>
+    </ul>
+
+    <h3 class="h3">Segmentos que combinam</h3>
+    <ul class="chips">
+      <li>Moda fitness</li>
+      <li>Suplementos</li>
+      <li>Tênis e acessórios de corrida</li>
+      <li>Skincare e cosméticos</li>
+      <li>Moda feminina</li>
+      <li>Academias e estúdios</li>
+      <li>Eventos de bem-estar</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ CONTATO ============ -->
+<section class="section section--dark contact" id="contato">
+  <div class="wrap">
+    <h2 class="h2">Tem uma ideia? Me conta.</h2>
+    <div class="contact__actions">
+      <a class="btn btn--solid" href="https://wa.me/556194078951?text=Oi%20Ketlin!%20Vi%20seu%20m%C3%ADdia%20kit%20e%20queria%20conversar%20sobre%20uma%20parceria." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+      <a class="btn" href="https://www.instagram.com/ketlinpires_18/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>Ketlin Victória</span>
+    <span>© <span id="ano">2026</span></span>
+  </div>
+</footer>
+
+<!-- Botão fixo (aparece depois do hero) -->
+<a class="fab" href="#contato" aria-hidden="true" tabindex="-1">Falar com a Ketlin</a>
+
+<script src="js/script.js" defer></script>
+</body>
+</html>
